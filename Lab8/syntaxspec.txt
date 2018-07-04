@@ -1,0 +1,30 @@
+* kolla_molekyl
+    1. Skapar kö.
+    2. Sätter in bokstäverna i kön.
+    3. Skickar vidare till kolla_storbokstav.
+    4. Om ett Syntaxfel uppstår fångar vid det här.
+    5. Molekylen är korrekt.
+
+* kolla_storbokstav
+    1. Peekar och kollar ifall nästa bokstav i kön är en storbokstav.
+    2. Isåfall dequeuar vi den bokstaven
+    3. Sedan skickas resten av kön vidare till kolla_litenbokstav och kolla_siffra.
+    4. raisar Syntaxfel om första bokstaven ej är en stor bokstav.
+
+* kolla_litenbokstav
+    1. Kollar om nästa bokstav i kön är liten.
+    2. Isåfall dequeuar vi den.
+    3. Fortsätter med resten av kön i kolla_siffra.
+
+* kolla_siffra
+    1. Skapar 2 st set av nummer, ett olagligt och ett lagligt.
+    2. Kollar om nästa värde inte är None.
+    3a. Kollar så att nästa värde inte är med i nummer1 och är med i nummer2.
+    3b. Då dequeuar vi.
+    3c. Om nästa värde är en bokstav får vi Syntaxfel.
+    3d. Om talet är för litet så raisar vi Syntaxfel.
+
+* main
+    1. Frågar input från användare.
+    2. Skickar in användarens input till kolla_molekyl
+    3. Printar resultat.
